@@ -9,7 +9,7 @@ public class gameManager : MonoBehaviour {
     public player player;
     public Text scoreText;
     int score;
-    int displayedScore;
+    float countdown=1;
     float scoreTime;
     bool Intervallepasse=true;
 
@@ -17,12 +17,16 @@ public class gameManager : MonoBehaviour {
 	void Start () {
         scoreText = GameObject.Find("score").GetComponent<Text>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
-        Debug.Log("lol");
     }
 
     // Update is called once per frame
     void FixedUpdate () {
-        score += (int)(Mathf.Pow(player.vitesseY, 2) + Mathf.Pow(player.vitesseY, 2)) / 10;
-        scoreText.text = "SCORE: " + score;
+        countdown -= Time.deltaTime;
+        if (countdown <= 0)
+        {
+            score += (int)(Mathf.Pow(player.vitesseY, 2) + Mathf.Pow(player.vitesseY, 2));
+            scoreText.text = "SCORE: " + score;
+            countdown = 1;
+        }
     }
 }
