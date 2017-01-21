@@ -11,7 +11,6 @@ public class gameManager : MonoBehaviour {
     int score;
     float countdown=1;
     float scoreTime;
-    bool Intervallepasse=true;
 
 	// Use this for initialization
 	void Start () {
