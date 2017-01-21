@@ -19,5 +19,8 @@ public class WaveBehaviour : MonoBehaviour{
     // Update is called once per frame
     void Update(){
 		this.GetComponent<Rigidbody>().angularVelocity = new Vector3 ();
+		if (this.GetComponent<Rigidbody>().velocity.magnitude < 0.1) {
+			Destroy(gameObject);
+		}
     }
 }
