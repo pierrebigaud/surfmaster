@@ -29,6 +29,10 @@ public class player : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         inputDir = (float)Input.GetAxisRaw("Horizontal");
+        if (surfPhysicsBody2D.transform.rotation.z>45f)
+        {
+            Debug.Log("passage");
+        }
         if (inputDir!=0)
         {
             if (surfPhysicsBody2D.velocity.x < -vitesseMax)
