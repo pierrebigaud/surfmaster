@@ -14,7 +14,7 @@ public class WaveSpawnScript : MonoBehaviour {
 
 	void Start() {
 		QuickStart();
-		StartCoroutine (SpawnWaves());
+		StartCoroutine(SpawnWaves());
 	}
 
 	Vector3 RandomPost() {
