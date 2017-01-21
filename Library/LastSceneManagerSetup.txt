@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/sea.unity
+- path: Assets/scene/sea.unity
   isLoaded: 1
   isActive: 1
